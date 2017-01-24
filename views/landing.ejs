@@ -1,0 +1,14 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+        <div style="width: 30%; margin: 60px auto; text-align: center;">
+            <h4>Welcome to the Dashboard Portal</h4>
+            <% if (!currentUser) { %>
+                <h4><a href="/login">Login</a></h4>
+            <% } else { %>
+                <h4><a href="/dashboard">Visit Dashboard</a></h4>
+            <% } %>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

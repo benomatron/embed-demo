@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Silverstone Demo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style media="screen" type="text/css">
+          body, html {width:100vw; height:100vh; overflow: hidden; background-color: #3a4151;}
+          iframe {width:100vw; height:90vh; border:none; background-color: #3a4151;}
+          h4, h4 > a, h4 > a:hover {color: #fff;}
+          .container {margin: 0 0 0 20px; padding: 0;}
+        </style>
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">Dashboard Portal</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <% if (!currentUser) { %>
+                    <li><a href="/login">Login</a></li>
+                  <% } else { %>
+                    <li><a href="/logout">Logout</a></li>
+                  <% } %>
+                </ul>
+            </div>
+          </div>
+      </nav>
